@@ -18,6 +18,10 @@ import img15 from "..//assets/trello.svg"
 import img16 from "..//assets/figma-icon.svg"
 import img17 from "..//assets/excalidraw-edit-1.svg"
 
+import image1Arecobus from "..//assets/arecobusimagen1.jpg"
+import image2ArecoBus from "..//assets/arecobusimagen2.jpg"
+import image3ArecoBus from "..//assets/arecobusimagen3.jpg"
+
 
 const stackImages = [
     { src: img1, alt: "HTML", group: "lenguajes"},
@@ -41,8 +45,14 @@ const stackImages = [
     { src: img16, alt: "Figma" , group: "tools"},
     { src: img17, alt: "Excalidraw" , group: "tools"}
   ];
+
+  const imagesArecobus = [
+    { src: image1Arecobus, alt: "Arecobus"},
+    { src: image2ArecoBus, alt: "Arecobus"},
+    { src: image3ArecoBus, alt: "Arecobus"},
+  ]
   
 
 
-export default { stackImages, toolsImages }
+export default { stackImages, toolsImages ,imagesArecobus }
 
