@@ -1,0 +1,49 @@
+.marquee-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 200px; /* Ajusta el tamaño según lo necesario */
+    background-color: #f0f0f0;
+    border-radius: 20px;
+  }
+  
+  .icon-row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .icon {
+    width: 80px;
+    height: auto;
+    margin: 0 10px;
+  }
+  
+  .row-left {
+    animation: moveLeft 10s linear infinite;
+  }
+  
+  .row-right {
+    animation: moveRight 10s linear infinite;
+  }
+  
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes moveRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
