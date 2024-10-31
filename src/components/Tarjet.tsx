@@ -7,18 +7,20 @@ interface images {
     alt: string;
 }
 
+interface techUses {
+    src: string;
+    alt: string;
+}
+
 
 interface TarjetProps {
     titleProyect: string;
     descriptionProyect: string;
     images: images[],
-    techUses1: string;
-    techUses2: string;
-    techUses3: string;
-    techUses4: string;
+    techUses: techUses[];
 }
 
-export function Tarjet({ titleProyect, descriptionProyect, images, techUses1, techUses2, techUses3, techUses4 }: TarjetProps) {
+export function Tarjet({ titleProyect, descriptionProyect, images, techUses }: TarjetProps) {
 
     const [currentIndex, setCurrentIndex] = useState<number>(0);
 
@@ -65,10 +67,14 @@ export function Tarjet({ titleProyect, descriptionProyect, images, techUses1, te
                 <p className="text-black text-xl font-semibold">Tecnologías utilizadas</p>
 
                 <div className="container-img flex w-full gap-3 h-[50px] justify-normal items-center">
-                    <img src={techUses1} className="h-[35px]" alt="Tech icon 1" />
-                    <img src={techUses2} className="h-[30px]" alt="Tech icon 2" />
-                    <img src={techUses3} className="h-[35px]" alt="Tech icon 3" />
-                    <img src={techUses4} className="h-[35px]" alt="Tech icon 4" />
+                    {techUses.map((techUses, index) => (
+                        <img
+                            key={index}
+                            src={techUses.src}
+                            alt={techUses.alt}
+                            className="w-12 h-12"
+                        />
+                    ))}
                 </div>
 
                 <div className="container-button-view-more flex mt-3 w-full justify-center items-center">

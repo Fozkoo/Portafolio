@@ -23,10 +23,7 @@ export const Proyects = () => {
                 titleProyect={proyects.titleProyect}
                 descriptionProyect={proyects.description}
                 images={[{ src: proyects.img1, alt: proyects.titleProyect }, { src: proyects.img2, alt: proyects.titleProyect }, { src: proyects.img3, alt: proyects.titleProyect }]}
-                techUses1={proyects.techUses1}
-                techUses2={proyects.techUses2}
-                techUses3={proyects.techUses3}
-                techUses4={proyects.techUses4}
+                techUses={[{ src: proyects.techUses1, alt: proyects.titleProyect }, { src: proyects.techUses2, alt: proyects.titleProyect }, { src: proyects.techUses3, alt: proyects.titleProyect }, { src: proyects.techUses4, alt: proyects.titleProyect }]}
               />
             ))}
           </div>
