@@ -1,4 +1,4 @@
-import img from '..//assets/image1.jpeg'
+import img from '..//assets/images/tizianomartinelli.jpeg'
 
 function Presentation() {
   return (

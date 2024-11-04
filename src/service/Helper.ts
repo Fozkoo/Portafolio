@@ -1,57 +1,60 @@
-import img1 from "..//assets/html-edit-1.svg"
-import img2 from "..//assets/css-edit-1.svg"
-import img3 from "..//assets/java-edit-1.svg"
-import img4 from "..//assets/javascript-edit-1.svg"
-import img5 from "..//assets/typescript-edit-1.svg"
-import img6 from "..//assets/mysql-edit-1.svg"
+// IMPORT ICONS
+import htmlLogo from "../assets/icons/html-edit-1.svg";
+import cssLogo from "../assets/icons/css-edit-1.svg";
+import javaLogo from "../assets/icons/java-edit-1.svg";
+import javascriptLogo from "../assets/icons/javascript-edit-1.svg";
+import typescriptLogo from "../assets/icons/typescript-edit-1.svg";
+import mysqlLogo from "../assets/icons/mysql-edit-1.svg";
+import reactLogo from "../assets/icons/react-edit-1.svg";
+import tailwindLogo from "../assets/icons/tailwindcss-edit-1.svg";
+import bootstrapLogo from "../assets/icons/boostrap-edit-1.svg";
+import springBootLogo from "../assets/icons/springboot-edit-1.svg";
+import ionicLogo from "../assets/icons/ionic-edit-1.svg";
+import gitLogo from "../assets/icons/git-edit-1.svg";
+import githubLogo from "../assets/icons/github-edit-1.svg";
+import postmanLogo from "../assets/icons/postman.svg";
+import trelloLogo from "../assets/icons/trello.svg";
+import figmaLogo from "../assets/icons/figma-icon.svg";
+import excalidrawLogo from "../assets/icons/excalidraw-edit-1.svg";
+import ionicicontwo from "../assets/icons/ionic-icon.svg";
 
-import reactLogo from "..//assets/react-edit-1.svg"
-import tailwindLogo from "..//assets/tailwindcss-edit-1.svg"
-import img9 from "..//assets/boostrap-edit-1.svg"
-import springBootLogo from "..//assets/springboot-edit-1.svg"
-import ionicLogo from "..//assets/ionic-edit-1.svg"
 
-import img12 from "..//assets/git-edit-1.svg"
-import img13 from "..//assets/github-edit-1.svg"
-import img14 from "..//assets/postman.svg"
-import img15 from "..//assets/trello.svg"
-import img16 from "..//assets/figma-icon.svg"
-import img17 from "..//assets/excalidraw-edit-1.svg"
-
-import image1ArecoBus from "..//assets/arecobusimagen1.jpg"
-import image2ArecoBus from "..//assets/arecobusimagen2.jpg"
-import image3ArecoBus from "..//assets/arecobusimagen3.jpg"
+// IMPORT IMAGES
+import image1ArecoBus from "../assets/images/arecobusimagen1.jpg"; // Cambiado a formato .webp para mejorar la carga
+import image2ArecoBus from "../assets/images/arecobusimagen2.jpg";
+import image3ArecoBus from "../assets/images/arecobusimagen3.jpg";
+import gym1 from "../assets/images/imggym1.webp"
+import gym2 from "../assets/images/imggym2.webp"
+import registro1 from "../assets/images/imgregistro1.webp"
+import registro2 from "../assets/images/imgregistro2.webp"
+import registro3 from "../assets/images/imgregistro3.webp"
+import transparentImage from "../assets/images/transparentimage.png";
 
 
 const stackImages = [
-  { src: img1, alt: "HTML", group: "lenguajes" },
-  { src: img2, alt: "CSS", group: "lenguajes" },
-  { src: img3, alt: "Java", group: "lenguajes" },
-  { src: img4, alt: "JavaScript", group: "lenguajes" },
-  { src: img5, alt: "MySQL", group: "lenguajes" },
-  { src: img6, alt: "TypeScript", group: "lenguajes" },
+  { src: htmlLogo, alt: "HTML", group: "lenguajes" },
+  { src: cssLogo, alt: "CSS", group: "lenguajes" },
+  { src: javaLogo, alt: "Java", group: "lenguajes" },
+  { src: javascriptLogo, alt: "JavaScript", group: "lenguajes" },
+  { src: typescriptLogo, alt: "TypeScript", group: "lenguajes" },
+  { src: mysqlLogo, alt: "MySQL", group: "lenguajes" },
   { src: reactLogo, alt: "React", group: "frameworks" },
   { src: tailwindLogo, alt: "Tailwind CSS", group: "frameworks" },
-  { src: img9, alt: "Bootstrap", group: "frameworks" },
+  { src: bootstrapLogo, alt: "Bootstrap", group: "frameworks" },
   { src: springBootLogo, alt: "Spring Boot", group: "frameworks" },
   { src: ionicLogo, alt: "Ionic", group: "frameworks" }
 ];
 
+const imgSupport = transparentImage;
+
 const toolsImages = [
-  { src: img12, alt: "Git", group: "tools" },
-  { src: img13, alt: "GitHub", group: "tools" },
-  { src: img14, alt: "Postman", group: "tools" },
-  { src: img15, alt: "Trello", group: "tools" },
-  { src: img16, alt: "Figma", group: "tools" },
-  { src: img17, alt: "Excalidraw", group: "tools" }
+  { src: gitLogo, alt: "Git", group: "tools" },
+  { src: githubLogo, alt: "GitHub", group: "tools" },
+  { src: postmanLogo, alt: "Postman", group: "tools" },
+  { src: trelloLogo, alt: "Trello", group: "tools" },
+  { src: figmaLogo, alt: "Figma", group: "tools" },
+  { src: excalidrawLogo, alt: "Excalidraw", group: "tools" }
 ];
-
-const imagesArecobus = [
-  { src: image1ArecoBus, alt: "Arecobus" },
-  { src: image2ArecoBus, alt: "Arecobus" },
-  { src: image3ArecoBus, alt: "Arecobus" },
-]
-
 
 
 const totalData = [
@@ -65,22 +68,33 @@ const totalData = [
     "techUses1": reactLogo,
     "techUses2": tailwindLogo,
     "techUses3": springBootLogo,
-    "techUses4": ionicLogo,
+    "techUses4": ionicicontwo,
   },
   {
-    "titleProyect": "Prueba",
-    "description": "loremasdasdasdasd as",
-    "img1": image1ArecoBus,
-    "img2": image2ArecoBus,
-    "img3": image3ArecoBus,
+    "titleProyect": "Tu mundo Fitness",
+    "description": "Proyecto que recopila la informacion de los distintos gimnasios de la ciudad de San Antonio de Areco.",
+    "img1": gym1,
+    "img2": gym2,
+    "img3": gym1,
     "techUses1": reactLogo,
     "techUses2": tailwindLogo,
-    "techUses3": springBootLogo,
-    "techUses4": ionicLogo,
+    "techUses3": bootstrapLogo,
+    "techUses4": "",
+  },
+  {
+    "titleProyect": "Sistema de registro",
+    "description": "Este sistema permite cargar usuarios universitarios y permite filtrar por sexo y ademas buscar por tipeo",
+    "img1": registro1,
+    "img2": registro2,
+    "img3": registro3,
+    "techUses1": reactLogo,
+    "techUses2": tailwindLogo,
+    "techUses3": bootstrapLogo,
+    "techUses4": springBootLogo,
   }
 ]
 
 
 
-export default { stackImages, toolsImages, imagesArecobus, totalData }
+export default { stackImages, toolsImages, totalData, imgSupport }
 
