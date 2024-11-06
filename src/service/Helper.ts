@@ -91,7 +91,8 @@ const totalData = [
     "techUses2": tailwindLogo,
     "techUses3": bootstrapLogo,
     "techUses4": springBootLogo,
-  }
+  },
+  
 ]
 
 

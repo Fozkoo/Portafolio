@@ -49,8 +49,6 @@ export function Tarjet({ titleProyect, descriptionProyect, images, techUses }: T
                                 alt={images[currentIndex].alt || "image"}
                                 className="object-cover w-full h-full transition-opacity duration-500 ease-in-out hover:opacity-50"
                             />
-                            
-
                         )}
                         
                     </div>
@@ -62,10 +60,19 @@ export function Tarjet({ titleProyect, descriptionProyect, images, techUses }: T
                                 className={`w-3 h-3 rounded-full  ${currentIndex === index ? 'bg-gray-800' : 'bg-gray-400'}`}
                             />
                         ))}
+
                     </div>
                 </div>
 
+
+
             </div>
+
+
+
+
+
+
             <div className="container-info-tarjets flex flex-col border-t-2 bg-white p-3 h-[55%]">
             
                 <div className="container-info h-[45%]">
