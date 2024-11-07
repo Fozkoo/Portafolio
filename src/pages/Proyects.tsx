@@ -11,7 +11,7 @@ export const Proyects = () => {
       <div className="container-proyects flex flex-col bg-slate-50 mx-48 h-[100vh]">
 
 
-        <div className="container-section flex flex-col w-full px-[7%]">
+        <div className="container-section flex  flex-col w-full px-[7%]">
           <div className="container-text">
             <p className="font-bold text-7xl">Proyects</p>
           </div>
