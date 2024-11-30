@@ -1,7 +1,8 @@
 import img from "..//assets/images/tizianomartinelli.jpeg"
 import logoGitHub from "..//assets/icons/github-edit-1.svg"
 import cv from "..//assets/icons/curriculum.svg"
-import linkedin from "..//assets/icons/linkedin.svg"
+
+
 export const AboutMe = () => {
   return (
     <div className='container-proyects flex flex-col bg-slate-50 mx-48 h-[100vh]'>
@@ -11,7 +12,7 @@ export const AboutMe = () => {
         </div>
 
         <div className="container  flex justify-center  items-center rounded-3xl  mt-6  p-10 bg-[#E8E8E8]/80">
-          <div className="container-text flex  text-justify justify-center items-center text-2xl  flex-col font-medium h-full  w-[60%] p-2">
+          <div className="container-text flex  justify-center items-center text-2xl  flex-col font-medium h-full  w-[60%] p-2">
             <p>Soy estudiante de Licenciatura en Informática en la Universidad Nacional de San Antonio de Areco y autodidacta en tecnologías como React, Ionic, y TypeScript. Desde que comencé mi carrera, descubrí una pasión por la creación de aplicaciones web y móviles, y he trabajado tanto en proyectos personales como profesionales. Actualmente, enseño programación a niños y ofrezco servicios como freelancer.
             </p>
 
