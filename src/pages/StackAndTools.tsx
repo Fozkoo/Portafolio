@@ -6,7 +6,7 @@ import ImageSection from "..//components/ImageSection";
 
 function StackAndTools() {
   return (
-    <div className="container-presentation  bg-slate-50 flex flex-col h-[100vh] justify-center gap-2 items-center mx-48">      
+    <div id='stack' className="container-presentation  bg-slate-50 flex flex-col h-[100vh] justify-center gap-2 items-center mx-48">      
       <div className="container-section flex flex-col w-full px-[7%]">
         <div className="container-text">
           <p className="font-bold text-7xl">Stack</p>

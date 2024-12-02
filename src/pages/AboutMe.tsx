@@ -1,11 +1,11 @@
-import img from "..//assets/images/tizianomartinelli.jpeg"
+import img from "..//assets/images/tizianomartinelli.webp"
 import logoGitHub from "..//assets/icons/github-edit-1.svg"
 import cv from "..//assets/icons/curriculum.svg"
 
 
 export const AboutMe = () => {
   return (
-    <div className='container-proyects flex flex-col bg-slate-50 mx-48 h-[100vh]'>
+    <div id="aboutme" className='container-proyects flex flex-col bg-slate-50 mx-48 h-[100vh]'>
       <div className="container-section  flex  flex-col w-full px-[7%]">
         <div className="container-text">
           <p className="font-bold text-7xl">About me</p>

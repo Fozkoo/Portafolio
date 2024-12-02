@@ -1,9 +1,9 @@
-import img from '..//assets/images/tizianomartinelli.jpeg'
+import img from '..//assets/images/tizianomartinelli.webp'
 
 function Presentation() {
   return (
     <>
-      <div className="container-presentation flex h-[100vh] bg-slate-50 mx-48">
+      <div id='presentation' className="container-presentation flex h-[100vh] bg-slate-50 mx-48">
 
         <div className="container-section-one flex justify-center items-center w-[65%] ">
           <div className="container-name-and-text flex flex-col ">

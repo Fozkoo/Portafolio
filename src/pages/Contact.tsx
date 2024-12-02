@@ -22,13 +22,19 @@ export const Contact = () => {
 
 
   return (
-    <div className='container-contact flex flex-col bg-slate-50 mx-48 h-[100vh]'>
+    <div id="contact" className='container-contact flex flex-col bg-slate-50 mx-48 h-[100vh]'>
       <div className="container-section flex flex-col w-full px-[7%]">
+
+
         <div className="container-text">
           <p className="font-bold text-7xl">Contact</p>
         </div>
-        <div className="container flex justify-between gap-3 items-center rounded-3xl mt-6 p-10 bg-[#E8E8E8]/80 h-[600px]">
-          <div className="container-form flex justify-center items-center bg-white h-[90%] rounded-2xl w-[50%]">
+
+
+
+        <div className="container flex justify-center gap-4 items-center rounded-3xl mt-6 p-10 bg-[#E8E8E8]/80 h-[700px]">
+
+          <div className="container-form bg-white flex justify-center items-center  h-[90%] rounded-2xl w-[45%]">
 
 
 
@@ -47,52 +53,53 @@ export const Contact = () => {
               {({ values, handleSubmit, handleChange, handleBlur, errors }) => (
                 <form onSubmit={handleSubmit} className="w-full max-w-md space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700">
                       Your name
                     </label>
                     <input
                       type="text"
                       id="name"
                       name="name"
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-white px-4 py-2"
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:border-blue-500 focus:ring-blue-500 bg-white px-4 py-2"
                       placeholder="Enter your full name"
                       value={values.name}
                       onChange={handleChange}
                       onBlur={handleBlur}
                     />
-                    {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+                    {errors.name && <p className="text-red-500 mt-2 text-sm font-medium">{errors.name}</p>}
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                    <label htmlFor="email" className="block text-sm font-semibold text-gray-700">
                       Email address
                     </label>
                     <input
                       type="email"
                       id="email"
                       name="email"
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-white px-4 py-2"
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:border-blue-500 focus:ring-blue-500 bg-white px-4 py-2"
                       placeholder="Enter your email"
                       value={values.email}
                       onChange={handleChange}
                       onBlur={handleBlur}
                     />
-                    {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+                    {errors.email && <p className="text-red-500 mt-2 text-sm font-medium">{errors.email}</p>}
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                    <label htmlFor="message" className="block text-sm font-semibold text-gray-700">
                       Write your message
                     </label>
                     <textarea
                       id="message"
                       name="message"
                       rows={4}
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-white px-4 py-2"
+
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:border-blue-500 focus:ring-blue-500 bg-white px-4 py-2"
                       placeholder="Write us your question here..."
                       value={values.message}
                       onChange={handleChange}
                       onBlur={handleBlur}
                     />
-                    {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
+                    {errors.message && <p className="text-red-500 mt-2 text-sm font-medium">{errors.message}</p>}
                   </div>
                   <button
                     type="submit"
@@ -106,9 +113,66 @@ export const Contact = () => {
               )}
             </Formik>
           </div>
-          <div className="container-info bg-white w-[50%] ">
-            <div className='bg-blue-400 text-gray w-full'></div>
+
+
+
+          <div className="container-info   flex flex-col gap-5 justify-center items-center h-[90%] rounded-2xl w-[45%]">
+
+            {/* Ubicación */}
+            <div className="location flex w-[60%] justify-start items-center space-x-4 h-[60px]">
+              <div className="icon flex justify-center items-center w-[15%]  h-full">
+                <i className="bi bi-geo-alt text-3xl"></i>
+              </div>
+              <div className="text  w-[85%] h-full flex flex-col justify-center">
+                <p className="text-lg font-medium text-gray-900">Ubicación</p>
+                <p className="text-base text-gray-700">San Antonio de Areco, Buenos Aires</p>
+              </div>
+            </div>
+
+            {/* Email */}
+            <div className="email flex w-[60%] justify-start items-center space-x-4 h-[60px]">
+              <div className="icon flex justify-center items-center w-[15%]  h-full">
+                <i className="bi bi-envelope-at text-3xl"></i>
+              </div>
+              <div className="text  w-[85%] h-full flex flex-col justify-center">
+                <p className="text-lg font-medium text-gray-900">Email</p>
+                <p className="text-base text-gray-700">tmartinelli@alumnos.unsada.edu.ar</p>
+              </div>
+            </div>
+
+            <div className="github-profile flex w-[60%] justify-start items-center space-x-4 h-[60px]">
+              <div className="icon flex justify-center items-center w-[15%]  h-full">
+                <i className="bi bi-github text-3xl"></i>
+              </div>
+              <div className="text  w-[85%] h-full flex flex-col justify-center">
+                <p className="text-lg font-medium text-gray-900">Perfil en GitHub</p>
+                <p className="text-base text-gray-700">Tiziano Martinelli</p>
+              </div>
+            </div>
+
+            <div className="phone flex w-[60%] justify-start items-center space-x-4 h-[60px]">
+              <div className="icon flex justify-center items-center w-[15%]  h-full">
+                <i className="bi bi-telephone text-3xl"></i>
+              </div>
+              <div className="text  w-[85%] h-full flex flex-col justify-center">
+                <p className="text-lg font-medium text-gray-900">Telefono</p>
+                <p className="text-base text-gray-700">+ 54 2326 41 3781</p>
+              </div>
+            </div>
+
+
+
+
+
           </div>
+
+
+
+
+
+
+
+
         </div>
       </div>
     </div>

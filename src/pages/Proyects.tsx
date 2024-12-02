@@ -8,7 +8,7 @@ export const Proyects = () => {
   
   return (
     <>
-      <div className="container-proyects flex flex-col bg-slate-50 mx-48 h-[100vh]">
+      <div id="proyects" className="container-proyects flex flex-col bg-slate-50 mx-48 h-[100vh]">
 
 
         <div className="container-section flex  flex-col w-full px-[7%]">
