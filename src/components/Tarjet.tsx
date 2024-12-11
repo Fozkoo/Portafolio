@@ -1,7 +1,10 @@
 
 import Helper from '../service/Helper';
 import { useEffect, useState } from 'react';
-import Button from './Button';
+import { Link } from 'lucide-react';
+
+const gitHublogo = Helper.toolsImages[1].src;
+const weblogo = Helper.otherLogos[0].src;
 
 interface Images {
     src: string;
@@ -18,10 +21,12 @@ interface TarjetProps {
     titleProyect: string;
     descriptionProyect: string;
     images: Images[],
-    techUses: TechUses[];
+    techUses: TechUses[],
+    gitHubLink: string;
+    webLink: string;
 }
 
-export function Tarjet({ titleProyect, descriptionProyect, images, techUses }: TarjetProps) {
+export function Tarjet({ titleProyect, descriptionProyect, images, techUses, gitHubLink, webLink }: TarjetProps) {
 
     const [currentIndex, setCurrentIndex] = useState<number>(0);
 
@@ -47,10 +52,10 @@ export function Tarjet({ titleProyect, descriptionProyect, images, techUses }: T
                             <img
                                 src={images[currentIndex].src}
                                 alt={images[currentIndex].alt || "image"}
-                                className="object-cover w-full h-full transition-opacity duration-500 ease-in-out hover:opacity-50"
+                                className="object-cover w-full h-full transition-opacity duration-500 ease-in-out"
                             />
                         )}
-                        
+
                     </div>
                     <div className="absolute bottom-2 left-1/2 transform  -translate-x-1/2 flex space-x-2">
                         {images.map((_, index) => (
@@ -74,7 +79,7 @@ export function Tarjet({ titleProyect, descriptionProyect, images, techUses }: T
 
 
             <div className="container-info-tarjets flex flex-col border-t-2 bg-white p-3 h-[55%]">
-            
+
                 <div className="container-info h-[45%]">
                     <h2 className="text-black text-2xl font-semibold">{titleProyect}</h2>
                     <p className="text-gray-500">{descriptionProyect}</p>
@@ -82,16 +87,31 @@ export function Tarjet({ titleProyect, descriptionProyect, images, techUses }: T
                 <h3 className="text-black text-xl font-semibold mb-3">Tecnologías utilizadas</h3>
                 <div className="container-img flex w-full gap-3 h-[50px] justify-normal items-center ">
                     {techUses.map((techUse, index) => (
-                        <img key={index} src={techUse.src} className="w-12 h-12" />
+                        <img key={index} src={techUse.src} className="w-10 h-10" />
                     ))}
                 </div>
-                <div className="container-button-view-more flex mt-3 w-full justify-center items-center">
-                    <button className="bg-black text-white px-4 py-2 rounded-lg">Ver más</button>
+
+                <div className="container-button-view-more flex mt-3 gap-5 w-full justify-center items-center">
+                    <a href={gitHubLink} target="_blank" rel="noopener noreferrer">
+                        <img
+                            src={gitHublogo}
+                            alt="github-logo"
+                            className="w-8 h-8 hover:scale-125 transition-transform duration-300"
+                        />
+                    </a>
+                    <a href={webLink} target="_blank" rel="noopener noreferrer">
+                        <img
+                            src={weblogo}
+                            alt="web-img"
+                            className="w-8 h-8 hover:scale-125 transition-transform duration-300"
+                        />
+                    </a>
                 </div>
 
-                
 
-                
+
+
+
 
             </div>
 

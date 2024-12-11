@@ -1,42 +1,39 @@
 import { Formik } from "formik";
 import emailjs from '@emailjs/browser';
+import Title from "../components/Title";
 
 export const Contact = () => {
   const handleSubmit = async (values: { name: string; email: string; message: string }, { resetForm }: { resetForm: () => void }) => {
-    console.log('Valores recibidos:', values); // Verifica que los valores lleguen correctamente
+    console.log('Valores recibidos:', values); 
     try {
       const result = await emailjs.send(
-        'service_8qvep0e', // Service ID
-        'template_1vufqpm', // Template ID
+        'service_8qvep0e', 
+        'template_1vufqpm', 
         values,
-        '5gXMg5i_gu5Mr8ffn' // User ID
+        '5gXMg5i_gu5Mr8ffn' 
       );
-      console.log('Correo enviado:', result.text); // Verifica la respuesta de emailjs
+      console.log('Correo enviado:', result.text); 
       alert('¡Correo enviado exitosamente!');
-      resetForm(); // Reinicia el formulario
+      resetForm(); 
     } catch (error) {
-      console.error('Error al enviar el correo:', error); // Muestra el error en la consola
+      console.error('Error al enviar el correo:', error); 
       alert('Hubo un error al enviar el correo. Intenta nuevamente.');
     }
   };
 
 
   return (
-    <div id="contact" className='container-contact flex flex-col bg-slate-50 mx-48 h-[100vh]'>
+    <div id="contact" className='container-contact flex flex-col bg-slate-50 mx-48 h-[100vh] max-2xl:mx-0  max-2xl:h-full max-2xl:pt-14'>
       <div className="container-section flex flex-col w-full px-[7%]">
-
-
-        <div className="container-text">
-          <p className="font-bold text-7xl">Contact</p>
-        </div>
+        <Title
+          title="Contacto"
+        />
 
 
 
-        <div className="container flex justify-center gap-4 items-center rounded-3xl mt-6 p-10 bg-[#E8E8E8]/80 h-[700px]">
+        <div className="container flex max-2xl:flex-col justify-center gap-4 items-center rounded-3xl mt-6 p-10 bg-[#E8E8E8]/80 h-[700px] shadow-md max-2xl:h-full max-2xl:gap-20 max-2xl:p-6">
 
-          <div className="container-form bg-white flex justify-center items-center  h-[90%] rounded-2xl w-[45%]">
-
-
+          <div className="container-form bg-white flex justify-center items-center h-[90%] rounded-2xl w-[45%] max-2xl:w-full max-2xl:h-auto max-2xl:rounded-2xl max-2xl:p-6">
 
             <Formik
               initialValues={{ name: '', email: '', message: '' }}
@@ -47,13 +44,19 @@ export const Contact = () => {
                 if (!values.message) errors.message = 'El mensaje es obligatorio';
                 return errors;
               }}
-
               onSubmit={handleSubmit}
             >
               {({ values, handleSubmit, handleChange, handleBlur, errors }) => (
-                <form onSubmit={handleSubmit} className="w-full max-w-md space-y-6">
+                <form
+                  onSubmit={handleSubmit}
+                  className="w-full max-w-md space-y-6 max-2xl:max-w-full"
+                >
+
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-semibold text-gray-700"
+                    >
                       Your name
                     </label>
                     <input
@@ -66,10 +69,17 @@ export const Contact = () => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                     />
-                    {errors.name && <p className="text-red-500 mt-2 text-sm font-medium">{errors.name}</p>}
+                    {errors.name && (
+                      <p className="text-red-500 mt-2 text-sm font-medium">{errors.name}</p>
+                    )}
                   </div>
+
+
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-gray-700">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-semibold text-gray-700"
+                    >
                       Email address
                     </label>
                     <input
@@ -82,25 +92,39 @@ export const Contact = () => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                     />
-                    {errors.email && <p className="text-red-500 mt-2 text-sm font-medium">{errors.email}</p>}
+                    {errors.email && (
+                      <p className="text-red-500 mt-2 text-sm font-medium">
+                        {errors.email}
+                      </p>
+                    )}
                   </div>
+
+
                   <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-gray-700">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-semibold text-gray-700"
+                    >
                       Write your message
                     </label>
                     <textarea
                       id="message"
                       name="message"
                       rows={4}
-
                       className="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:border-blue-500 focus:ring-blue-500 bg-white px-4 py-2"
                       placeholder="Write us your question here..."
                       value={values.message}
                       onChange={handleChange}
                       onBlur={handleBlur}
                     />
-                    {errors.message && <p className="text-red-500 mt-2 text-sm font-medium">{errors.message}</p>}
+                    {errors.message && (
+                      <p className="text-red-500 mt-2 text-sm font-medium">
+                        {errors.message}
+                      </p>
+                    )}
                   </div>
+
+
                   <button
                     type="submit"
                     className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
@@ -108,7 +132,6 @@ export const Contact = () => {
                   >
                     Send message
                   </button>
-
                 </form>
               )}
             </Formik>
@@ -116,55 +139,67 @@ export const Contact = () => {
 
 
 
-          <div className="container-info   flex flex-col gap-5 justify-center items-center h-[90%] rounded-2xl w-[45%]">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div className="container-info flex flex-col gap-5 justify-center items-center h-[90%] rounded-2xl w-[45%]  max-2xl:w-full max-2xl:h-auto max-2xl:rounded-none">
 
             {/* Ubicación */}
-            <div className="location flex w-[60%] justify-start items-center space-x-4 h-[60px]">
-              <div className="icon flex justify-center items-center w-[15%]  h-full">
+            <div className="location flex w-[60%] justify-start items-center space-x-4 h-[60px] max-2xl:w-full max-2xl:flex-col max-2xl:space-x-0 max-2xl:space-y-2 max-2xl:h-auto  p-2 rounded-lg">
+              <div className="icon flex justify-center items-center w-[15%] h-full max-2xl:w-auto">
                 <i className="bi bi-geo-alt text-3xl"></i>
               </div>
-              <div className="text  w-[85%] h-full flex flex-col justify-center">
+              <div className="text w-[85%] h-full flex flex-col justify-center max-2xl:w-full">
                 <p className="text-lg font-medium text-gray-900">Ubicación</p>
                 <p className="text-base text-gray-700">San Antonio de Areco, Buenos Aires</p>
               </div>
             </div>
 
             {/* Email */}
-            <div className="email flex w-[60%] justify-start items-center space-x-4 h-[60px]">
-              <div className="icon flex justify-center items-center w-[15%]  h-full">
+            <div className="email flex w-[60%] justify-start items-center space-x-4 h-[60px] max-2xl:w-full max-2xl:flex-col max-2xl:space-x-0 max-2xl:space-y-2 max-2xl:h-auto  p-2 rounded-lg">
+              <div className="icon flex justify-center items-center w-[15%] h-full max-2xl:w-auto">
                 <i className="bi bi-envelope-at text-3xl"></i>
               </div>
-              <div className="text  w-[85%] h-full flex flex-col justify-center">
+              <div className="text w-[85%] h-full flex flex-col justify-center max-2xl:w-full">
                 <p className="text-lg font-medium text-gray-900">Email</p>
                 <p className="text-base text-gray-700">tmartinelli@alumnos.unsada.edu.ar</p>
               </div>
             </div>
 
-            <div className="github-profile flex w-[60%] justify-start items-center space-x-4 h-[60px]">
-              <div className="icon flex justify-center items-center w-[15%]  h-full">
+            {/* GitHub */}
+            <div className="github-profile flex w-[60%] justify-start items-center space-x-4 h-[60px] max-2xl:w-full max-2xl:flex-col max-2xl:space-x-0 max-2xl:space-y-2 max-2xl:h-auto  p-2 rounded-lg">
+              <div className="icon flex justify-center items-center w-[15%] h-full max-2xl:w-auto">
                 <i className="bi bi-github text-3xl"></i>
               </div>
-              <div className="text  w-[85%] h-full flex flex-col justify-center">
+              <div className="text w-[85%] h-full flex flex-col justify-center max-2xl:w-full">
                 <p className="text-lg font-medium text-gray-900">Perfil en GitHub</p>
                 <p className="text-base text-gray-700">Tiziano Martinelli</p>
               </div>
             </div>
 
-            <div className="phone flex w-[60%] justify-start items-center space-x-4 h-[60px]">
-              <div className="icon flex justify-center items-center w-[15%]  h-full">
+            {/* Teléfono */}
+            <div className="phone flex w-[60%] justify-start items-center space-x-4 h-[60px] max-2xl:w-full max-2xl:flex-col max-2xl:space-x-0 max-2xl:space-y-2 max-2xl:h-auto  p-2 rounded-lg">
+              <div className="icon flex justify-center items-center w-[15%] h-full max-2xl:w-auto">
                 <i className="bi bi-telephone text-3xl"></i>
               </div>
-              <div className="text  w-[85%] h-full flex flex-col justify-center">
-                <p className="text-lg font-medium text-gray-900">Telefono</p>
+              <div className="text w-[85%] h-full flex flex-col justify-center max-2xl:w-full">
+                <p className="text-lg font-medium text-gray-900">Teléfono</p>
                 <p className="text-base text-gray-700">+ 54 2326 41 3781</p>
               </div>
             </div>
-
-
-
-
-
           </div>
+
 
 
 

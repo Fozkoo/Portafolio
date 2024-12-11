@@ -17,10 +17,11 @@ import trelloLogo from "../assets/icons/trello.svg";
 import figmaLogo from "../assets/icons/figma-icon.svg";
 import excalidrawLogo from "../assets/icons/excalidraw-edit-1.svg";
 import ionicicontwo from "../assets/icons/ionic-icon.svg";
+import weblogo from "../assets/icons/weblogo.svg";
 
 
 // IMPORT IMAGES
-import image1ArecoBus from "../assets/images/arecobusimagen1.jpg"; // Cambiado a formato .webp para mejorar la carga
+import image1ArecoBus from "../assets/images/arecobusimagen1.jpg";
 import image2ArecoBus from "../assets/images/arecobusimagen2.jpg";
 import image3ArecoBus from "../assets/images/arecobusimagen3.jpg";
 import gym1 from "../assets/images/imggym1.webp"
@@ -56,6 +57,10 @@ const toolsImages = [
   { src: excalidrawLogo, alt: "Excalidraw", group: "tools" }
 ];
 
+const otherLogos = [
+  { src: weblogo, alt: "Web", group: "otros" }
+]
+
 
 const totalData = [
 
@@ -65,10 +70,12 @@ const totalData = [
     "img1": image1ArecoBus,
     "img2": image2ArecoBus,
     "img3": image3ArecoBus,
-    "techUses1": reactLogo,
-    "techUses2": tailwindLogo,
-    "techUses3": springBootLogo,
-    "techUses4": ionicicontwo,
+    "techUses3": tailwindLogo,
+    "techUses2": springBootLogo,
+    "techUses1": ionicicontwo,
+    "techUses4": imgSupport,
+    "gitHubLink": "www.google.com",
+    "webLink": "www.youtube.com"
   },
   {
     "titleProyect": "Tu mundo Fitness",
@@ -80,6 +87,8 @@ const totalData = [
     "techUses2": tailwindLogo,
     "techUses3": bootstrapLogo,
     "techUses4": "",
+    "gitHubLink": "www.google.com",
+    "webLink": "www.youtube.com"
   },
   {
     "titleProyect": "Sistema de registro",
@@ -91,11 +100,13 @@ const totalData = [
     "techUses2": tailwindLogo,
     "techUses3": bootstrapLogo,
     "techUses4": springBootLogo,
+    "gitHubLink": "www.google.com",
+    "webLink": "www.youtube.com"
   },
   
 ]
 
 
 
-export default { stackImages, toolsImages, totalData, imgSupport }
+export default { stackImages, toolsImages, totalData, imgSupport, otherLogos };
 
