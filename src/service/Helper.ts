@@ -8,7 +8,7 @@ import mysqlLogo from "../assets/icons/mysql-edit-1.svg";
 import reactLogo from "../assets/icons/react-edit-1.svg";
 import tailwindLogo from "../assets/icons/tailwindcss-edit-1.svg";
 import bootstrapLogo from "../assets/icons/boostrap-edit-1.svg";
-import springBootLogo from "../assets/icons/springboot-edit-1.svg";
+import springBootLogo from "../assets/icons/springboot-edit-1.svg"
 import ionicLogo from "../assets/icons/ionic-edit-1.svg";
 import gitLogo from "../assets/icons/git-edit-1.svg";
 import githubLogo from "../assets/icons/github-edit-1.svg";
@@ -21,7 +21,7 @@ import weblogo from "../assets/icons/weblogo.svg";
 
 
 // IMPORT IMAGES
-import image1ArecoBus from "../assets/images/arecobusimagen1.jpg";
+import image1ArecoBus from "../assets/images/arecobusimagen1.webp";
 import image2ArecoBus from "../assets/images/arecobusimagen2.jpg";
 import image3ArecoBus from "../assets/images/arecobusimagen3.jpg";
 import gym1 from "../assets/images/imggym1.webp"

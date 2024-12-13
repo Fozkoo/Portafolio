@@ -43,21 +43,24 @@ export function Tarjet({ titleProyect, descriptionProyect, images, techUses, git
     };
 
     return (
-        <div className="container-tarjets flex flex-col overflow-hidden shadow-xl h-[550px] w-[350px] rounded-xl">
+        <div className="container-tarjets flex flex-col overflow-hidden shadow-xl h-[550px] w-[350px] rounded-xl
+        
+        max-2xl:h-[470px] max-2xl:w-[290px] max-sm:w-[280px]">
 
-            <div className="container-carousel flex justify-center items-center h-[45%] p-3 bg-white">
-                <div className="relative w-full z-[1000] overflow-hidden">
-                    <div className="w-full bg-black h-56">
+            <div className="container-carousel flex justify-center items-center h-[45%] p-3 bg-white  max-2xl:h-[45%]">
+                <div className="relative w-full z-[1000] overflow-hidden ">
+                    <div className="w-full bg-black h-56 max-2xl:h-44">
                         {images[currentIndex] && (
                             <img
                                 src={images[currentIndex].src}
                                 alt={images[currentIndex].alt || "image"}
-                                className="object-cover w-full h-full transition-opacity duration-500 ease-in-out"
+                                className="object-cover h-56 w-60 max-2xl:w-full max-2xl:h-full"
                             />
                         )}
 
                     </div>
-                    <div className="absolute bottom-2 left-1/2 transform  -translate-x-1/2 flex space-x-2">
+
+                    <div className="absolute bottom-2 left-1/2 transform  -translate-x-1/2  flex space-x-2">
                         {images.map((_, index) => (
                             <button
                                 key={index}
@@ -76,20 +79,31 @@ export function Tarjet({ titleProyect, descriptionProyect, images, techUses, git
 
 
 
+            <div className="container-info-tarjets  flex flex-col border-t-2 bg-white p-3 h-[55%]
+            max-2xl:h-full
+            ">
 
-
-            <div className="container-info-tarjets flex flex-col border-t-2 bg-white p-3 h-[55%]">
-
-                <div className="container-info h-[45%]">
-                    <h2 className="text-black text-2xl font-semibold">{titleProyect}</h2>
-                    <p className="text-gray-500">{descriptionProyect}</p>
+                <div className="container-info  flex flex-col gap-1">
+                    <h2 className="text-black text-2xl font-semibold
+                    max-2xl:text-lg
+                    ">{titleProyect}</h2>
+                    <p className="text-gray-500
+                    max-2xl:text-sm max-2xl:font-medium
+                    ">{descriptionProyect}</p>
                 </div>
-                <h3 className="text-black text-xl font-semibold mb-3">Tecnologías utilizadas</h3>
-                <div className="container-img flex w-full gap-3 h-[50px] justify-normal items-center ">
-                    {techUses.map((techUse, index) => (
-                        <img key={index} src={techUse.src} className="w-10 h-10" />
-                    ))}
+
+                <div className="container-info  flex flex-col gap-1">
+                    <h3 className="text-black  text-xl font-semibold mb-3 max-2xl:mb-2
+                max-2xl:text-lg
+                ">Tecnologías utilizadas</h3>
+                    <div className="container-img flex w-full gap-3 h-[50px]  justify-normal items-center max-2xl:h-[30px]">
+                        {techUses.map((techUse, index) => (
+                            <img key={index} src={techUse.src} className="w-10 h-10 max-2xl:w-7 max-2xl:h-7" />
+                        ))}
+                    </div>
                 </div>
+
+
 
                 <div className="container-button-view-more flex mt-3 gap-5 w-full justify-center items-center">
                     <a href={gitHubLink} target="_blank" rel="noopener noreferrer">

@@ -46,4 +46,30 @@
       transform: translateX(100%);
     }
   }
-  
+
+/*
+  @media (max-width: 1380px) {
+    .section-desktop {
+      
+      
+      
+    }
+
+    .nombre {
+      font-size: 55px !important;
+      line-height: 50px;
+    }
+
+    .container-presentation{
+      margin-left: 70px;
+      margin-right: 70px;
+    }
+
+    .imagen {
+      width: 300px !important;
+
+    }
+
+
+  }
+  */

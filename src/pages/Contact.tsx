@@ -4,36 +4,36 @@ import Title from "../components/Title";
 
 export const Contact = () => {
   const handleSubmit = async (values: { name: string; email: string; message: string }, { resetForm }: { resetForm: () => void }) => {
-    console.log('Valores recibidos:', values); 
+    console.log('Valores recibidos:', values);
     try {
       const result = await emailjs.send(
-        'service_8qvep0e', 
-        'template_1vufqpm', 
+        'service_8qvep0e',
+        'template_1vufqpm',
         values,
-        '5gXMg5i_gu5Mr8ffn' 
+        '5gXMg5i_gu5Mr8ffn'
       );
-      console.log('Correo enviado:', result.text); 
+      console.log('Correo enviado:', result.text);
       alert('¡Correo enviado exitosamente!');
-      resetForm(); 
+      resetForm();
     } catch (error) {
-      console.error('Error al enviar el correo:', error); 
+      console.error('Error al enviar el correo:', error);
       alert('Hubo un error al enviar el correo. Intenta nuevamente.');
     }
   };
 
 
   return (
-    <div id="contact" className='container-contact flex flex-col bg-slate-50 mx-48 h-[100vh] max-2xl:mx-0  max-2xl:h-full max-2xl:pt-14'>
-      <div className="container-section flex flex-col w-full px-[7%]">
+    <div id="contact" className='container-contact flex flex-col bg-slate-50  justify-center mx-48 max-2xl:mx-20 max-xl:mx-5 h-[100vh]   max-2xl:h-full max-2xl:pb-16 max-2xl:pt-14'>
+      <div className="container-section flex flex-col w-full px-[7%]  max-sm:px-5">
         <Title
           title="Contacto"
         />
 
 
 
-        <div className="container flex max-2xl:flex-col justify-center gap-4 items-center rounded-3xl mt-6 p-10 bg-[#E8E8E8]/80 h-[700px] shadow-md max-2xl:h-full max-2xl:gap-20 max-2xl:p-6">
+        <div className="container  flex max-sm:flex-col justify-center gap-4 items-center rounded-3xl mt-6 p-10 bg-[#E8E8E8]/80 h-[700px] shadow-md max-2xl:h-full  max-2xl:gap-20 max-sm:gap-5 max-2xl:p-6 max-sm:p-3">
 
-          <div className="container-form bg-white flex justify-center items-center h-[90%] rounded-2xl w-[45%] max-2xl:w-full max-2xl:h-auto max-2xl:rounded-2xl max-2xl:p-6">
+          <div className="container-form bg-white  flex justify-center items-center h-[90%] rounded-2xl w-[45%] max-2xl:w-full max-2xl:h-auto max-2xl:rounded-2xl max-2xl:p-6">
 
             <Formik
               initialValues={{ name: '', email: '', message: '' }}
@@ -139,73 +139,53 @@ export const Contact = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <div className="container-info flex flex-col gap-5 justify-center items-center h-[90%] rounded-2xl w-[45%]  max-2xl:w-full max-2xl:h-auto max-2xl:rounded-none">
+          <div className="container-info flex flex-col  gap-10 justify-center  items-center h-[100%] max-sm:gap-14  w-[45%] max-sm:w-full max-sm:h-[450px]">
 
             {/* Ubicación */}
-            <div className="location flex w-[60%] justify-start items-center space-x-4 h-[60px] max-2xl:w-full max-2xl:flex-col max-2xl:space-x-0 max-2xl:space-y-2 max-2xl:h-auto  p-2 rounded-lg">
-              <div className="icon flex justify-center items-center w-[15%] h-full max-2xl:w-auto">
-                <i className="bi bi-geo-alt text-3xl"></i>
+            <div className="location flex w-[100%] justify-start items-center space-x-4 h-[60px] p-2 rounded-lg max-sm:flex-col max-sm:space-x-0 max-sm:justify-center">
+              <div className="icon flex justify-center items-center w-[15%] h-full max-2xl:w-auto max-sm:w-full">
+                <i className="bi bi-geo-alt text-3xl "></i>
               </div>
-              <div className="text w-[85%] h-full flex flex-col justify-center max-2xl:w-full">
-                <p className="text-lg font-medium text-gray-900">Ubicación</p>
-                <p className="text-base text-gray-700">San Antonio de Areco, Buenos Aires</p>
+              <div className="text w-[85%] h-full flex flex-col justify-center max-2xl:w-full max-sm:w-full max-sm:items-center">
+                <p className="text-lg mt-6 font-medium text-gray-900 ">Ubicación</p>
+                <p className="text-base  text-gray-700 text-center">San Antonio de Areco, Buenos Aires</p>
               </div>
             </div>
 
             {/* Email */}
-            <div className="email flex w-[60%] justify-start items-center space-x-4 h-[60px] max-2xl:w-full max-2xl:flex-col max-2xl:space-x-0 max-2xl:space-y-2 max-2xl:h-auto  p-2 rounded-lg">
-              <div className="icon flex justify-center items-center w-[15%] h-full max-2xl:w-auto">
+            <div className="email flex w-[100%] justify-start items-center space-x-4 h-[60px] p-2 rounded-lg max-sm:flex-col max-sm:space-x-0 max-sm:justify-center">
+              <div className="icon flex justify-center items-center w-[15%] h-full max-2xl:w-auto max-sm:w-full">
                 <i className="bi bi-envelope-at text-3xl"></i>
               </div>
-              <div className="text w-[85%] h-full flex flex-col justify-center max-2xl:w-full">
+              <div className="text w-[85%] h-full flex flex-col justify-center max-2xl:w-full max-sm:w-full max-sm:items-center">
                 <p className="text-lg font-medium text-gray-900">Email</p>
-                <p className="text-base text-gray-700">tmartinelli@alumnos.unsada.edu.ar</p>
+                <p className="text-base  text-gray-700 text-center">tmartinelli@alumnos.unsada.edu.ar</p>
               </div>
             </div>
 
             {/* GitHub */}
-            <div className="github-profile flex w-[60%] justify-start items-center space-x-4 h-[60px] max-2xl:w-full max-2xl:flex-col max-2xl:space-x-0 max-2xl:space-y-2 max-2xl:h-auto  p-2 rounded-lg">
-              <div className="icon flex justify-center items-center w-[15%] h-full max-2xl:w-auto">
+            <div className="github-profile flex w-[100%] justify-start items-center space-x-4 h-[60px] p-2 rounded-lg max-sm:flex-col max-sm:space-x-0 max-sm:justify-center">
+              <div className="icon flex justify-center items-center w-[15%] h-full max-2xl:w-auto max-sm:w-full">
                 <i className="bi bi-github text-3xl"></i>
               </div>
-              <div className="text w-[85%] h-full flex flex-col justify-center max-2xl:w-full">
+              <div className="text w-[85%] h-full flex flex-col justify-center max-2xl:w-full max-sm:w-full max-sm:items-center">
                 <p className="text-lg font-medium text-gray-900">Perfil en GitHub</p>
                 <p className="text-base text-gray-700">Tiziano Martinelli</p>
               </div>
             </div>
 
             {/* Teléfono */}
-            <div className="phone flex w-[60%] justify-start items-center space-x-4 h-[60px] max-2xl:w-full max-2xl:flex-col max-2xl:space-x-0 max-2xl:space-y-2 max-2xl:h-auto  p-2 rounded-lg">
-              <div className="icon flex justify-center items-center w-[15%] h-full max-2xl:w-auto">
+            <div className="phone flex w-[100%] justify-start items-center space-x-4 h-[60px] p-2 rounded-lg max-sm:flex-col max-sm:space-x-0 max-sm:justify-center">
+              <div className="icon flex justify-center items-center w-[15%] h-full max-2xl:w-auto max-sm:w-full">
                 <i className="bi bi-telephone text-3xl"></i>
               </div>
-              <div className="text w-[85%] h-full flex flex-col justify-center max-2xl:w-full">
+              <div className="text w-[85%] h-full flex flex-col justify-center max-2xl:w-full max-sm:w-full max-sm:items-center">
                 <p className="text-lg font-medium text-gray-900">Teléfono</p>
                 <p className="text-base text-gray-700">+ 54 2326 41 3781</p>
               </div>
             </div>
+
           </div>
-
-
-
-
-
-
-
 
 
         </div>

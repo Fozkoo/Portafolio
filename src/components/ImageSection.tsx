@@ -10,9 +10,9 @@ interface Image {
   function ImageSection({ images }: ImageSectionProps) {
     return (
       <section className="image-section w-full  overflow-hidden">
-        <div className="moving-container justify-between flex gap-5 max-2xl:flex-wrap max-2xl:gap-6 max-2xl:justify-center">
+        <div className="moving-container justify-between  flex gap-5 max-2xl:flex-wrap max-sm:justify-center max-2xl:px-12 max-sm:px-2">
           {images.map((image, index) => (
-            <img key={index} src={image.src} className="h-24 max-2xl:h-14" alt={image.alt} />
+            <img key={index} src={image.src} className="h-24 w-24 max-2xl:h-[73px] max-2xl:w-[73px] max-sm:h-[60px] max-sm:w-[60px]" alt={image.alt} />
           ))}
         </div>
       </section>

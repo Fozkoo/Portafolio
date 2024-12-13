@@ -2,7 +2,7 @@ const Footer: React.FC = () => {
     return (
         <footer
             id="footer"
-            className="container-contact bg-slate-50 flex justify-center items-center flex-col h-[300px] mx-48 max-2xl:h-auto max-2xl:mx-0 max-2xl:p-5"
+            className="container-contact bg-slate-50 flex justify-center items-center flex-col h-[300px] mx-48 max-2xl:mx-20 max-xl:mx-5 max-2xl:h-auto  max-2xl:p-5"
         >
 
             <div className="text flex items-center">
