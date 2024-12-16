@@ -2,7 +2,7 @@ import img from "../assets/images/tizianomartinelli.webp";
 import logoGitHub from "../assets/icons/github-edit-1.svg";
 import cv from "../assets/icons/curriculum.svg";
 import Title from "../components/Title.tsx";
-import pdf from "../assets/images/Tiziano Martinelli.pdf";
+import pdf from "../assets/images/TizianoMartinelli.pdf";
 import Info from "..//service/Info.json"
 
 export const AboutMe = () => {

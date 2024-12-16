@@ -25,7 +25,7 @@ export const Contact = () => {
 
   return (
     <div id="contact" className='container-contact flex flex-col bg-slate-50  justify-center mx-48 max-2xl:mx-20 max-xl:mx-5 h-[100vh]   max-2xl:h-full max-2xl:pb-16 max-2xl:pt-14'>
-      <div className="container-section flex flex-col w-full px-[7%]  max-sm:px-5">
+      <div className="container-section flex flex-col w-full px-[7%]  max-sm:px-5 max-2xl:px-[2%]">
         <Title
           title="Contacto"
         />
