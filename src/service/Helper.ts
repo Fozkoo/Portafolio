@@ -18,17 +18,20 @@ import figmaLogo from "../assets/icons/figma-icon.svg";
 import excalidrawLogo from "../assets/icons/excalidraw-edit-1.svg";
 import ionicicontwo from "../assets/icons/ionic-icon.svg";
 import weblogo from "../assets/icons/weblogo.svg";
+import argentineFlag from "..//assets/icons/argentina-flag.svg";
+import englishFlag from "..//assets/icons/english-flag.svg";
 
 
 // IMPORT IMAGES
 import image1ArecoBus from "../assets/images/arecobusimagen1.webp";
-import image2ArecoBus from "../assets/images/arecobusimagen2.jpg";
-import image3ArecoBus from "../assets/images/arecobusimagen3.jpg";
-import gym1 from "../assets/images/imggym1.webp"
-import gym2 from "../assets/images/imggym2.webp"
+import image2ArecoBus from "../assets/images/arecobusimagen2.webp";
+import image3ArecoBus from "../assets/images/arecobusimagen3.webp";
 import registro1 from "../assets/images/imgregistro1.webp"
 import registro2 from "../assets/images/imgregistro2.webp"
 import registro3 from "../assets/images/imgregistro3.webp"
+import klendar1 from "..//assets/images/klendar1.webp";
+import klendar2 from "..//assets/images/klendar2.webp";
+import klendar3 from "..//assets/images/klendar3.webp";
 import transparentImage from "../assets/images/transparentimage.png";
 
 
@@ -47,6 +50,8 @@ const stackImages = [
 ];
 
 const imgSupport = transparentImage;
+const argImagen = argentineFlag;
+const englishImagen = englishFlag;
 
 const toolsImages = [
   { src: gitLogo, alt: "Git", group: "tools" },
@@ -58,7 +63,10 @@ const toolsImages = [
 ];
 
 const otherLogos = [
-  { src: weblogo, alt: "Web", group: "otros" }
+  { src: weblogo, alt: "Web", group: "otros" },
+  { src: argentineFlag, alt: "Argentina" },
+  { src: englishFlag, alt: "English" }
+
 ]
 
 
@@ -74,21 +82,21 @@ const totalData = [
     "techUses2": springBootLogo,
     "techUses1": ionicicontwo,
     "techUses4": imgSupport,
-    "gitHubLink": "www.google.com",
-    "webLink": "www.youtube.com"
+    "gitHubLink": "https://github.com/Fozkoo/ArecoBusMovile",
+    "webLink": "https:/arecobus.netlify.app"
   },
   {
-    "titleProyect": "Tu mundo Fitness",
-    "description": "Proyecto que recopila la informacion de los distintos gimnasios de la ciudad de San Antonio de Areco.",
-    "img1": gym1,
-    "img2": gym2,
-    "img3": gym1,
+    "titleProyect": "Klendar",
+    "description": "Klendar es un calendario para gestionar eventos de manera sencilla, inspirada en Google Calendar.",
+    "img1": klendar1,
+    "img2": klendar2,
+    "img3": klendar3,
     "techUses1": reactLogo,
     "techUses2": tailwindLogo,
-    "techUses3": bootstrapLogo,
-    "techUses4": "",
-    "gitHubLink": "www.google.com",
-    "webLink": "www.youtube.com"
+    "techUses3": typescriptLogo,
+    "techUses4": springBootLogo,
+    "gitHubLink": "https://github.com/Fozkoo/calendarFrontend",
+    "webLink": "https://poo-dev.unsada.edu.ar:3003/login"
   },
   {
     "titleProyect": "Sistema de registro",
@@ -100,13 +108,13 @@ const totalData = [
     "techUses2": tailwindLogo,
     "techUses3": bootstrapLogo,
     "techUses4": springBootLogo,
-    "gitHubLink": "www.google.com",
-    "webLink": "www.youtube.com"
+    "gitHubLink": "https://github.com/Fozkoo/SistemaRegistro",
+    "webLink": ""
   },
   
 ]
 
 
 
-export default { stackImages, toolsImages, totalData, imgSupport, otherLogos };
+export default { stackImages, toolsImages, totalData, imgSupport, otherLogos, argImagen, englishImagen };
 

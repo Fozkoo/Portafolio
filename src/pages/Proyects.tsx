@@ -1,6 +1,8 @@
 import { Tarjet } from "../components/Tarjet"
 import Helper from "../service/Helper"
 import Title from "..//components/Title.tsx"
+import Info from "..//service/Info.json"
+
 export const Proyects = () => {
 
   const proyects = Helper.totalData;
@@ -22,8 +24,8 @@ export const Proyects = () => {
             {proyects.map((proyect, index) => (
               <Tarjet
                 key={index}
-                titleProyect={proyect.titleProyect}
-                descriptionProyect={proyect.description}
+                titleProyect={Info.projects[index].name}
+                descriptionProyect={Info.projects[index].description}
                 images={[
                   { src: proyect.img1 || imgSupport, alt: proyect.titleProyect },
                   { src: proyect.img2 || imgSupport, alt: proyect.titleProyect },

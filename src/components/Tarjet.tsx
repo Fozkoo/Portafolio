@@ -2,7 +2,7 @@
 import Helper from '../service/Helper';
 import { useEffect, useState } from 'react';
 import { Link } from 'lucide-react';
-
+import Info from "..//service/Info.json";
 const gitHublogo = Helper.toolsImages[1].src;
 const weblogo = Helper.otherLogos[0].src;
 
@@ -54,7 +54,7 @@ export function Tarjet({ titleProyect, descriptionProyect, images, techUses, git
                             <img
                                 src={images[currentIndex].src}
                                 alt={images[currentIndex].alt || "image"}
-                                className="object-cover h-56 w-60 max-2xl:w-full max-2xl:h-full"
+                                className="object-cover h-56 w-full max-2xl:w-full max-2xl:h-full"
                             />
                         )}
 
@@ -95,7 +95,7 @@ export function Tarjet({ titleProyect, descriptionProyect, images, techUses, git
                 <div className="container-info  flex flex-col gap-1">
                     <h3 className="text-black  text-xl font-semibold mb-3 max-2xl:mb-2
                 max-2xl:text-lg
-                ">Tecnologías utilizadas</h3>
+                ">{Info.otherTitles.tecnologiasUsadas}</h3>
                     <div className="container-img flex w-full gap-3 h-[50px]  justify-normal items-center max-2xl:h-[30px]">
                         {techUses.map((techUse, index) => (
                             <img key={index} src={techUse.src} className="w-10 h-10 max-2xl:w-7 max-2xl:h-7" />

@@ -1,0 +1,84 @@
+{
+    "personal_info": {
+        "name": "Tiziano Martinelli",
+        "profession": "Desarrollador Web",
+        "about_me": "Soy estudiante de Licenciatura en Informática en la Universidad Nacional de San Antonio de Areco y autodidacta en tecnologías como React, Ionic y TypeScript. Apasionado por crear aplicaciones web y móviles, trabajo en proyectos personales y profesionales, además de enseñar programación a niños y ofrecer servicios como freelancer.",
+        "location": "San Antonio de Areco, Buenos Aires",
+        "extraData": "Apasionado por crear experiencias digitales innovadoras.",
+        "email": "tmartinelli@alumnos.unsada.edu.ar",
+        "github": "https://github.com/tmartinelli",
+        "phone": "+54 2326 41 3781",
+        "githubProfile": "Tiziano Martinelli"
+    },
+
+    "ubicacion": {
+        "pais": "Argentina",
+        "provincia": "Buenos Aires",
+        "localidad": "San Antonio de Areco"
+    },
+    "projects": [
+        {
+            "name": "ArecoBUS",
+            "description": "Proyecto que recopila la información de los distintos buses que operan en San Antonio de Areco.",
+            "technologies": [
+                "GitHub",
+                "Web"
+            ]
+        },
+        {
+            "name": "Klendar",
+            "description": "Klendar es un calendario para gestionar eventos de manera sencilla, inspirada en Google Calendar.",
+            "technologies": [
+                "GitHub",
+                "Web"
+            ]
+        },
+        {
+            "name": "Sistema de registro",
+            "description": "Este sistema permite cargar usuarios universitarios y permite filtrar por sexo y además buscar por tipeo.",
+            "technologies": [
+                "GitHub",
+                "Web"
+            ]
+        }
+    ],
+    "contact_form": {
+        "fields": [
+            {
+                "label": "Nombre completo",
+                "placeholder": "Ingresa tu nombre completo"
+            },
+            {
+                "email": "Dirección de correo electrónico",
+                "placeholder": "Ingresa tu correo electrónico"
+            },
+            {
+                "mensaje": "Deja tu mensaje",
+                "placeholder": "Escribe tu mensaje"
+            }
+        ],
+        "submit_button": "Enviar mensaje" 
+    },
+    "sections": [
+        {
+            "github": "Perfil de GitHub",
+            "cv": "Curriculum"
+        }
+    ],
+    "otherTitles": {
+        "tecnologiasUsadas": "Tecnologías utilizadas",
+        "contact": "Contacto",
+        "ubicacion": "Ubicación",
+        "email": "Email",
+        "perfilGithub": "Perfil de GitHub",
+        "Telefono": "Teléfono",
+        "Presentacion": "Presentación",
+        "Stack": "Stack",
+        "Tools": "Tools",
+        "Proyectos": "Proyectos",
+        "SobreMi": "Sobre mí",
+        "Contacto": "Contacto"
+    }
+
+
+}
