@@ -1,8 +1,6 @@
 import img from '../assets/images/tizianomartinelli.webp';
-import { Header } from '../components/Header';
 import "..//style/Styles.css";
 import Info from "..//service/Info.json";
-import stackImages from "..//service/Helper";
 
 function Presentation() {
   return (
@@ -61,7 +59,7 @@ function Presentation() {
 
 
       <section className="section-mobile hidden max-md:flex">
-        <Header />
+
         <div
           id="presentation"
           className="container-presentation flex h-screen bg-slate-50 px-8 md:px-16 lg:px-32 flex-col items-center justify-center gap-8"
